@@ -1,4 +1,4 @@
-package com.example.shopingCart.ShopingCart_New.model;
+package com.mkpits.shopping.model;
 
 public class Product {
 
