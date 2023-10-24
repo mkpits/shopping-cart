@@ -1,0 +1,41 @@
+.box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 400px;
+    justify-content: space-around;
+  border-radius: 50%;
+    padding-bottom: 10%;
+   
+  
+}
+.card{
+   
+    width: 250px;
+    text-align: center;
+    margin-top: -300px;
+    box-shadow: 10px 10px 10px 0 gray;
+    border-radius: 10px;
+    cursor: zoom-in;
+    /* background-position: center; */
+    overflow: hidden;
+    margin: 0 auto
+    
+
+
+    
+
+   
+   
+}
+div.card img{
+    /* width: 50%; */
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+   
+     
+}
+.card:hover{
+    transform: scale(1.2);
+    
+}
