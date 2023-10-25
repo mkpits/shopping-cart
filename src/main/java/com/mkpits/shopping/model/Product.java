@@ -2,7 +2,7 @@ package com.mkpits.shopping.model;
 
 public class Product {
 
-    private int product_id;
+    private long product_id;
 
     private String name;
 
@@ -11,11 +11,11 @@ public class Product {
     private float discountedPrice;
 
 
-    public int getProduct_id() {
+    public long getProduct_id() {
         return product_id;
     }
 
-    public void setProduct_id(int product_id) {
+    public void setProduct_id(long product_id) {
         this.product_id = product_id;
     }
 
