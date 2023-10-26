@@ -3,6 +3,8 @@ package com.mkpits.shopping.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -28,5 +30,8 @@ import javax.persistence.*;
         private String password;
         @Column(name="email")
         private String email;
+
+    @OneToMany(cascade=CascadeType.ALL,mappedBy = "userEntity")
+    private List<Address> addressList;
 
 }
