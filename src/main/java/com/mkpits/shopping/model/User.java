@@ -14,17 +14,17 @@ public class User {
     private String email;
 
     @ManyToMany
-    private List<Role> roles;
+    private List<RoleEntity> roles;
 
     public User() {
 
     }
 
-    public List<Role> getRoles() {
+    public List<RoleEntity> getRoles() {
         return roles;
     }
 
-    public void setRoles(List<Role> roles) {
+    public void setRoles(List<RoleEntity> roles) {
         this.roles = roles;
     }
 
