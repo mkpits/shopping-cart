@@ -13,6 +13,7 @@ import javax.persistence.*;
     public class Address {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Column(name = "address_id")
         private int addressId;
         @Column(name = "address_line_1")
         private String line1;
@@ -28,6 +29,10 @@ import javax.persistence.*;
         private String country;
         @Column(name = "type")
         private char type;
+
+        @Column(name="pincode")
+        private String pincode;
+
         @ManyToOne
         @JoinColumn(name = "id")
         private UserEntity userEntity;

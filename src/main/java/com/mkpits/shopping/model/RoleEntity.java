@@ -15,13 +15,14 @@ import java.util.List;
 @Table(name = "role")
 public class RoleEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long roleId;
     @Column(name = "role_name")
     private String roleName;
 
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 
 }

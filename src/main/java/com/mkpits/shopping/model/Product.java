@@ -1,5 +1,10 @@
 package com.mkpits.shopping.model;
 
+
+import javax.persistence.Entity;
+
+@Entity
+
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -14,6 +19,7 @@ import java.util.Date;
 @Builder
 @Data
 @Table(name="product")
+
 public class Product {
 
     @Id
