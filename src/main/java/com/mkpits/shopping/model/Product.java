@@ -1,5 +1,8 @@
 package com.mkpits.shopping.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Product {
 
     private long product_id;
