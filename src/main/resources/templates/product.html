@@ -26,16 +26,17 @@
                 <div class="font">
                     <i class="fa-regular fa-address-book fa-xl" style="margin-top: 20px"></i>
                     <a th:href="@{/showNewProductForm}" class="dropdown-item" >Add Product</a>
+<!--                    <br>-->
+<!--                    <i class="fa-regular fa-address-book fa-xl" style="margin-top: 20px"></i>-->
+<!--&lt;!&ndash;                    <a th:href="@{/showFormForUpdate/{id}(id=${product.id})}" class="dropdown-item" href="#">Update</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a th:href="@{/showFormForUpdate/{id}(id=${product.id})}" class="btn btn primary btn-sn mb-3">Update</a>&ndash;&gt;-->
+
                     <br>
                     <i class="fa-regular fa-address-book fa-xl" style="margin-top: 20px"></i>
-                    <a class="dropdown-item" href="#">Update</a>
-                    <br>
-                    <i class="fa-regular fa-address-book fa-xl" style="margin-top: 20px"></i>
-                    <a class="dropdown-item" href="login.html">Login</a>
+                    <a th:href="@{/showLoginPage}" class="dropdown-item" >Login</a>
+<!--                    <a th:href="@{/showLoginPage}" class="btn btn primary btn-sn mb-3">LoginPage</a>-->
                 </div>
-
-
-
+            </div>
         </li>
 
     </ul>
@@ -46,10 +47,11 @@
   <table class="table"border="1">
     <thead class="thead-dark">
     <tr>
-<!--      <th>Employee Email</th>-->
+<!--      <th>Images</th>-->
       <th>Product Name</th>
       <th>Product Category</th>
       <th>Product Price</th>
+        <th>Action</th>
 
 
     </tr>
@@ -59,9 +61,13 @@
 
     <tr th:each="product:${listProduct}">
 <!--      <td th:text="${employee.email}"></td>-->
-      <td th:text="${product.name}"></td>
-      <td th:text="${product.category}"></td>
-      <td th:text="${product.price}"></td>
+      <td th:text="${product.name}"><br><a th:href="@{/showFormForUpdate/{id}(id=${product.product_id})}" class="btn-group btn-group-lg">Update</a></td>
+      <td th:text="${product.category}"><br><a th:href="@{/showFormForUpdate/{id}(id=${product.product_id})}" class="btn-group btn-group-lg">Update</a></td>
+      <td th:text="${product.price}"><br><a th:href="@{/showFormForUpdate/{id}(id=${product.product_id})}" class="btn-group btn-group-lg">Update</a></td>
+        <td><a th:href="@{/showFormForUpdate/{id}(id=${product.product_id})}" class="btn-group btn-group-lg">Update</a>
+            <a th:href="@{/deleteProduct/{id}(id=${product.product_id})}" class="btn-group btn-group-lg">Delete</a></td>
+
+
 
 
     </tr>

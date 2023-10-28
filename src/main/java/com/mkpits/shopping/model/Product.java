@@ -18,7 +18,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long product_id;
+    private Long product_id;
 
     @Column(name = "name")
     private String name;
@@ -37,6 +37,7 @@ public class Product {
     private String created_at;
 
     @Column(name = "modified_at")
-    private Date modified_at;
+   // @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private String modified_at;
 
 }

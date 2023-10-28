@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -39,6 +40,29 @@ public class ProductController {
         return "redirect:/product";
 
     }
+@GetMapping("/showFormForUpdate/{id}")
+    public String showFormForUpdate(@PathVariable (value = "id")Long prduct_id ,Model model){
 
+    Product product = productService.getProductById(prduct_id);
 
+    model.addAttribute("product",product);
+
+    return "update_product";
+
+    }
+   // /showFormForUpdate/{id}
+
+    @GetMapping("/deleteProduct/{id}")
+    public String deleteProduct(@PathVariable(value = "id")Long prduct_id){
+
+        this.productService.deleteProductById(prduct_id);
+
+        return "redirect:/product";
+    }
+
+    @GetMapping("/showLoginPage")
+    public String redirectPage(){
+
+        return "register";
+    }
 }
