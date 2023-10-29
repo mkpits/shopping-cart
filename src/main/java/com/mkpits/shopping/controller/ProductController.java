@@ -64,5 +64,18 @@ public class ProductController {
     public String redirectPage(){
 
         return "register";
+        /// redirect to login page;
+    }
+
+    @GetMapping("/redirectToAdminPage")
+    public String redirectoAdminPage(){
+        return "product";
+        // redirect of admin to productPAge
+    }
+    @GetMapping("/redirectToUserLoginPage")
+    public String redirectToUser(){
+        return "login";
+
+        // redirect of user to user login
     }
 }
