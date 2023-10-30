@@ -66,6 +66,22 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>org.hibernate</groupId>-->
+<!--			<artifactId>hibernate-core</artifactId>-->
+<!--			<version>5.0.7.Final</version>-->
+<!--		</dependency>-->
+
+		<!--			Error creating bean with name -->
+		<!--			'entityManagerFactory' defined in class path resource -->
+		<!--			: Invocation of init method failed-->
+
+<!--		<dependency>-->
+<!--			<groupId>org.hibernate</groupId>-->
+<!--			<artifactId>hibernate-entitymanager</artifactId>-->
+<!--			<version>5.2.3.Final</version>-->
+<!--		</dependency>-->
+
 	</dependencies>
 
 	<build>
