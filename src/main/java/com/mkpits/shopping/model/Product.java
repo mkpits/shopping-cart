@@ -1,45 +1,43 @@
 package com.mkpits.shopping.model;
 
+
+import lombok.*;
+import javax.persistence.*;
+
+
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
+@Table(name="product")
+
 public class Product {
 
-    private long product_id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long product_id;
 
+    @Column(name = "name")
     private String name;
 
-    private float productPrice;
+    @Column(name = "category")
+    private String category;
 
-    private float discountedPrice;
+    @Column(name ="price")
+    private Double price;
 
+//    @Column(name = "discount_id")
+//    private Double discount_id;
 
-    public long getProduct_id() {
-        return product_id;
-    }
+    @Column(name = "created_at")
+//    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private String created_at;
 
-    public void setProduct_id(long product_id) {
-        this.product_id = product_id;
-    }
+    @Column(name = "modified_at")
+   // @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private String modified_at;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public float getProductPrice() {
-        return productPrice;
-    }
-
-    public void setProductPrice(float productPrice) {
-        this.productPrice = productPrice;
-    }
-
-    public float getDiscountedPrice() {
-        return discountedPrice;
-    }
-
-    public void setDiscountedPrice(float discountedPrice) {
-        this.discountedPrice = discountedPrice;
-    }
 }

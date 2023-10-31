@@ -3,6 +3,7 @@ package com.mkpits.shopping.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -17,7 +18,8 @@ import java.util.List;
     public class UserEntity {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private int id;
+        @Column(name = "user_id")
+        private int userId;
         @Column(name="first_name")
         private String firstName;
         @Column(name="middle_name")
@@ -30,8 +32,17 @@ import java.util.List;
         private String password;
         @Column(name="email")
         private String email;
+        @Column(name="created_at")
+        private int createdAt;
+        @Column(name="created_by")
+        private Date createdBy;
+        @Column(name="update_at")
+        private int updateAt;
+        @Column(name = "update_by")
+        private Date updateBy;
 
     @OneToMany(cascade=CascadeType.ALL,mappedBy = "userEntity")
+    @JoinColumn(name = "address_id")
     private List<Address> addressList;
 
 }
