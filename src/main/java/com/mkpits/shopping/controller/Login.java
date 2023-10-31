@@ -28,12 +28,13 @@ public class Login {
         }
     }
 
+//    class LocalSessionFactoryBean {
+//        @Bean(name = "entityManagerFactory")
+//        public LocalSessionFactoryBean sessionFactory() {
+//            LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+//
+//            return sessionFactory;
+//        }
+//    }
 }
-class LocalSessionFactoryBean {
-    @Bean(name = "entityManagerFactory")
-    public LocalSessionFactoryBean sessionFactory() {
-        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 
-        return sessionFactory;
-    }
-}
