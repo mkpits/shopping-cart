@@ -1,104 +1,53 @@
 package com.mkpits.shopping.model;
 
 
+import lombok.*;
+
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.List;
 
-@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity(name = "user")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    @Id
+    @Column(name = "user_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long uid;
-    private String fname;
+
+    @Column(name = "email")
     private String email;
 
-    @ManyToMany
-    private List<Role> roles;
+    @Column(name = "password")
+    private String password;
 
-    public User() {
+    @Column(name = "first_name")
+    private String firstName;
 
-    }
+    @Column(name = "middle_name")
+    private String middleName;
 
-    public List<Role> getRoles() {
-        return roles;
-    }
+    @Column(name = "last_name")
+    private String lastName;
 
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
+    @Column(name = "mobile_number")
+    private String mobileNumber;
 
-    public User(Long uid, String fname, String email, Long phoneNumber, String address, String password, Long pin) {
-        this.uid = uid;
-        this.fname = fname;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        Address = address;
-        Password = password;
-        this.pin = pin;
-    }
+    @Column(name = "created_at")
+    private Timestamp createdAt;
 
-    private Long phoneNumber;
+    @Column(name = "created_by")
+    private Long createdBy;
 
-    public Long getUid() {
-        return uid;
-    }
+    @Column(name = "updated_at")
+    private Timestamp updatedAt;
 
-    public void setUid(Long uid) {
-        this.uid = uid;
-    }
-
-    public String getFname() {
-        return fname;
-    }
-
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Long getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(Long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getAddress() {
-        return Address;
-    }
-
-    public void setAddress(String address) {
-        Address = address;
-    }
-
-    public String getPassword() {
-        return Password;
-    }
-
-    public void setPassword(String password) {
-        Password = password;
-    }
-
-    public Long getPin() {
-        return pin;
-    }
-
-    public void setPin(Long pin) {
-        this.pin = pin;
-    }
-
-    private String Address;
-    private String Password;
-    private Long pin;
-
+    @Column(name = "updated_by")
+    private Long updatedBy;
 
 }
