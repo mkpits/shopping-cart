@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+</head>
+<body>
+<div class="container w-50">
+  <div class="card w-75 md-3">
+    <div class="card-body">
+      <center><font color="blue"> <h3>Login Page</h3></font></center>
+      <form  th:action ="@{/checklogin}"  method="post">
+        <label for="email" class="form-label">Enter Email</label>
+        <input id="email" type="email" class="form-control small-width-input" placeholder="Enter your name"><br>
+
+        <label for="password" class="form-label">Password</label>
+        <input id="password" type="password" class="form-control small-width-input" placeholder="your middle name"><br>
+        <center>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </center>
+
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

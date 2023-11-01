@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity(name = "user")
-public class User {
+public class UserEntity {
 
     @Id
     @Column(name = "user_id")

@@ -5,6 +5,11 @@ import lombok.*;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
+
+import lombok.*;
+import javax.persistence.*;
+
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -35,6 +40,5 @@ public class Product {
 
     @Column(name = "updated_at")
     private Timestamp updatedAt;
-
 
 }
