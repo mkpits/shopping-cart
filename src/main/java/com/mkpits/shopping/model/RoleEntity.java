@@ -5,14 +5,13 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
-@Table(name = "role")
+@Entity(name = "role")
 public class RoleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
