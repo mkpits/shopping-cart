@@ -57,27 +57,27 @@ public class ProductController {
         return "redirect:/product";
     }
 
-    @GetMapping("/showLoginPage")
-    public String redirectPage(){
+//    @GetMapping("/showLoginPage")
+//    public String redirectPage(){
+//
+//        return "register";
+//        /// redirect to login page;
+//    }
 
-        return "register";
-        /// redirect to login page;
-    }
-
-    @GetMapping("/redirectToAdminPage")
-    public String redirectoAdminPage(){
-        return "product";
-        // redirect of admin to productPAge
-    }
-    @GetMapping("/redirectToUserLoginPage")
-    public String redirectToUser(){
-        return "login";
-
-        // redirect of user to user login
-    }
-    @GetMapping("/mainPage")
-    public String mainPage(){
-        return "dashboard";
-        // opening mainPage
-    }
+//    @GetMapping("/redirectToAdminPage")
+//    public String redirectoAdminPage(){
+//        return "product";
+//        // redirect of admin to productPAge
+//    }
+//    @GetMapping("/redirectToUserLoginPage")
+//    public String redirectToUser(){
+//        return "login";
+//
+//        // redirect of user to user login
+//    }
+//    @GetMapping("/mainPage")
+//    public String mainPage(){
+//        return "dashboard";
+//        // opening mainPage
+//    }
 }
