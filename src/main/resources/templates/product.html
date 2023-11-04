@@ -100,6 +100,21 @@
             display: flex;
             justify-content: space-around;
         }
+        .btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -145,7 +160,7 @@
 </div>
 <div class="product">
     <!-- ... your product content ... -->
-    <a href="/dashboard" class="btn">Go back to Dashboard</a>
+    <a th:href="@{/mainPage}" class="btn">Go back to Dashboard</a>
 </div>
 </body>
 </html>
