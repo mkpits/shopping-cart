@@ -28,7 +28,8 @@ public class ProductServiceImplement implements ProductService {
     @Override
     public Product getProductById(long id) {
         Optional<Product> optional = productRepository.findById(id);
-        Product product = null;
+        Product product ;
+//        Product product = null;
 
         if (optional.isPresent()){
 

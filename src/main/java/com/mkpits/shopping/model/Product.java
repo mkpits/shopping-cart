@@ -15,7 +15,7 @@ public class Product {
 
     @Id
     @Column(name = "product_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long product_id;
 
     @Column(name = "name")
@@ -36,4 +36,6 @@ public class Product {
     @Column(name = "modified_at")
     private String modified_at;
 
+    @Column(name = "discount_id")
+    private Integer discount_id;
 }
