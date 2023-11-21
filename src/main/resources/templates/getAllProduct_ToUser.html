@@ -34,6 +34,8 @@
       <td th:text="${product.category}"></td>
       <td th:text="${product.price}"></td>
 
+<!--      adding readonly tags to fix the coloum-->
+
       <td>
 
         <a th:href="@{/showFormForUpdate/{id}(id=${product.product_id})}" class="btn-group-lg">AddToCart</a>

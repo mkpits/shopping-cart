@@ -74,12 +74,13 @@
     <h2>Add Products</h2>
 
     <form action="#" th:action="@{/saveProduct}" th:object="${product}" method="post">
-        <input type="text" th:field="${product.product_id}" placeholder="Enter Product Id" class="form-control mb-4 col-4" >
+        <!--        <input type="text" th:field="${product.product_id}" placeholder="Enter Product Id" class="form-control mb-4 col-4" >-->
         <input type="text" th:field="${product.name}" placeholder="Enter Product Name" class="form-control mb-4 col-4">
         <input type="text" th:field="${product.category}" placeholder="Enter Product Category FMCG/HomeAppliance"
                class="form-control mb-4 col-4">
-        <input type="text" th:field="${product.price}" placeholder="Enter Product Price" class="form-control mb-4 col-4">
-<!--        <label>ProductCreatedAt</label>-->
+        <input type="text" th:field="${product.price}" placeholder="Enter Product Price"
+               class="form-control mb-4 col-4">
+        <!--        <label>ProductCreatedAt</label>-->
         <input type="datetime-local" th:field="${product.created_at}" placeholder="Select Product CreatedAt"
                class="form-control mb-4 col-4">
         <button type="submit" class="btn btn-info col-2">Save Product</button>

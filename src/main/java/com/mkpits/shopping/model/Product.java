@@ -10,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity(name = "product")
+@Entity(name = "product_new")
 public class Product {
 
     @Id
