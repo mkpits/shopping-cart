@@ -16,9 +16,9 @@ import java.util.List;
 public class RoleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long roleId;
-    @Column(name = "role_name")
-    private String roleName;
+    private long role_id;
+
+    private String role_name;
 
 
     @ManyToOne
