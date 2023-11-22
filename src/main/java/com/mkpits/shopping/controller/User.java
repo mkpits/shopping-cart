@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class User {
-    @Autowired
     private UserService userService;
-    @Autowired
     private AddressService addressService;
 
     @GetMapping("/")

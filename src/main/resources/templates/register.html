@@ -25,6 +25,7 @@
       <center><font color="blue"> <h3>Registration page</h3></font></center>
       <form  th:action ="@{/addUser}"  method="post">
         <div th:object="${user}">
+
           <label for="fname" class="form-label">First Name</label>
           <input id="fname" type="text" class="form-control" placeholder="Enter your name" th:field="*{first_name}" ><br>
 

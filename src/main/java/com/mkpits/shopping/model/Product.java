@@ -1,25 +1,28 @@
 package com.mkpits.shopping.model;
 
 import lombok.*;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4d38b40dc0711fef47d684e3add112b35873d84f
 
 import javax.persistence.*;
-import java.util.Date;
 
-@Entity
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Data
-@Table(name="product")
-
+@Entity(name = "product_new")
 public class Product {
 
     @Id
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long product_id;
+
+    @Column(name = "product_id")
+    private Long product_id;
 
     @Column(name = "name")
     private String name;
@@ -27,17 +30,21 @@ public class Product {
     @Column(name = "category")
     private String category;
 
-    @Column(name ="price")
+    @Column(name = "price")
     private Double price;
 
-//    @Column(name = "discount_id")
-//    private Double discount_id;
+    @Column(name = "quantity")
+    private Integer quantity;
 
     @Column(name = "created_at")
-//    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private String created_at;
 
     @Column(name = "modified_at")
-    private Date modified_at;
+    private String modified_at;
+
+    @Column(name = "discount_id")
+    private Integer discount_id;
+
+
 
 }
