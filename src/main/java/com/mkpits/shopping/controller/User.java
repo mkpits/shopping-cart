@@ -35,6 +35,6 @@ public class User {
     public String addUser(@ModelAttribute("user") UserEntity userEntity , @ModelAttribute("address") Address address){
         userService.createUser(userEntity);
         addressService.saveAddress(address);
-        return "redirect:/";
+        return "/index";
     }
 }
