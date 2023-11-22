@@ -1,10 +1,6 @@
 package com.mkpits.shopping.model;
 
 import lombok.*;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4d38b40dc0711fef47d684e3add112b35873d84f
 
 import javax.persistence.*;
 
