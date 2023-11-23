@@ -80,20 +80,26 @@
     <p>The total quantity : <span th:text="${product.quantity}"></span></p>
 
     <!--    passing values-->
-    <p>Total Amount: <span th:text="${product.total_amount}"></span></p>
 
-    <!-- In buypage.html -->
-    <p>Total Amount: <span th:text="${param.totalAmount}"></span></p>
-
+    <!-- In cart.html -->
+    <p id="total">Total Amount1: </p>
+<!--    <span th:text="${product.total_amount}"></span>-->
 
     <!--    passing values-->
 
     <h2 class="pay-info">Kindly pay on this number: 9975366927</h2>
     <h2>#Kindly note Udhari Band</h2>
 </div>
-<!--<script>-->
-<!--    var totalAmount = sessionStorage.getItem('totalAmount');-->
-<!--    document.getElementById('totalAmount').innerText = 'Total Amount: $' + totalAmount;-->
-<!--</script>-->
+<script>
+    // var totalAmount = sessionStorage.getItem('totalAmount');
+    // document.getElementById('totalAmount').innerText = 'Total Amount: $' + totalAmount;
+
+    var total = sessionStorage.getItem("total");
+    document.getElementById('total').innerText = 'Total Amount: $' + total;
+    console.log(total);
+    // alert(total);
+
+</script>
+
 </body>
 </html>

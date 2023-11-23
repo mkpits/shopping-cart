@@ -36,5 +36,10 @@ public class User {
         userService.createUser(userEntity);
         addressService.saveAddress(address);
         return "/index";
+
     }
+
+
 }
+
+

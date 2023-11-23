@@ -28,10 +28,12 @@ public class CartController {
     }
 
     @PostMapping("/buyProduct")
-    public String buyProducts(@ModelAttribute("product")Product product,Model model){
+    public String buyProducts(@ModelAttribute("product") Product product, Model model) {
 
 //        cartService.saveProduct(product);
         model.getAttribute("product");
+
+
 
         return "buypage";
     }
