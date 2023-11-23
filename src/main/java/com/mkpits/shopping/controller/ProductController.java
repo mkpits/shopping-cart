@@ -15,44 +15,76 @@ public class ProductController {
 
 
     @GetMapping("/product")
-    public String viewHomePage(Model model){
+    public String viewHomePage(Model model) {
 
-        model.addAttribute("listProduct",productService.getAllProducts());
+        model.addAttribute("listProduct", productService.getAllProducts());
         return "product";
 
     }
-@GetMapping("/showNewProductForm")
-    public String showNewProduct(Model model){
 
-    Product product = new Product();
-    model.addAttribute("product",product);
-    return "new_product";
+    @GetMapping("/showNewProductForm")
+    public String showNewProduct(Model model) {
+
+        Product product = new Product();
+        model.addAttribute("product", product);
+        return "new_product";
 
     }
 
     @PostMapping("/saveProduct")
-    public String saveProduct(@ModelAttribute("product")Product product){
+    public String saveProduct(@ModelAttribute("product") Product product) {
 
         productService.saveProduct(product);
         return "redirect:/product";
 
     }
-@GetMapping("/showFormForUpdate/{id}")
-    public String showFormForUpdate(@PathVariable (value = "id")Long prduct_id ,Model model){
 
-    Product product = productService.getProductById(prduct_id);
+    @GetMapping("/showFormForUpdate/{id}")
+    public String showFormForUpdate(@PathVariable(value = "id") Long product_id, Model model) {
 
-    model.addAttribute("product",product);
+        System.out.println("Start");
+        Product product = productService.getProductById(product_id);
+        model.addAttribute("product", product);
 
-    return "update_product";
-
+        return "update_product";
     }
-   // /showFormForUpdate/{id}
+
+    @PostMapping("/updateProductName")
+    public String updateProductName(@ModelAttribute("product") Product product) {
+
+        String name = product.getName();
+        String category = product.getCategory();
+        Double price = product.getPrice();
+
+        Long id = product.getProduct_id();
+        System.out.println(" " + name);
+        System.out.println("" + id);
+        System.out.println(" "+category);
+        System.out.println(" "+price);
+
+        String returnValue = "";
+
+        int result = productService.updateProductNameById(name, id);
+        int result2 = productService.updateProductCategoryById(category,id);
+        double result3 = productService.updateProductPriceById(price,id);
+
+        if (result > 0 && result2 > 0 && result3 > 0) {
+            System.out.println("Product name updated successfully");
+            returnValue = "redirect:/product";
+        } else {
+            returnValue = "index";
+        }
+
+        return returnValue;
+    }
+
+
+    // /showFormForUpdate/{id}
 
     @GetMapping("/deleteProduct/{id}")
-    public String deleteProduct(@PathVariable(value = "id")Long prduct_id){
+    public String deleteProduct(@PathVariable(value = "id") Long product_id) {
 
-        this.productService.deleteProductById(prduct_id);
+        this.productService.deleteProductById(product_id);
 
         return "redirect:/product";
     }

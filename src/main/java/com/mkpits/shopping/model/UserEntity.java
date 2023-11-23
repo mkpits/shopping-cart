@@ -3,51 +3,57 @@ package com.mkpits.shopping.model;
 
 import lombok.*;
 
+
 import javax.persistence.*;
+
+
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
+
+
+
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity(name = "user")
+
+@Table(name = "user")
 public class UserEntity {
-
     @Id
-    @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long uid;
+    @Column(name = "user_id") // Specify the column name in the database
+    private int user_id;
 
-    @Column(name = "email")
-    private String email;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name= "address_id",referencedColumnName = "address_id")
+    private Address address;
 
-    @Column(name = "password")
+    private String first_name;
+
+    private String middle_name;
+
+    private String last_name;
+
+    private String mobile_number;
+
     private String password;
 
-    @Column(name = "first_name")
-    private String firstName;
+    private String email;
 
-    @Column(name = "middle_name")
-    private String middleName;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date created_at;
 
-    @Column(name = "last_name")
-    private String lastName;
+    private int created_by;
 
-    @Column(name = "mobile_number")
-    private String mobileNumber;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date update_at;
 
-    @Column(name = "created_at")
-    private Timestamp createdAt;
+    private int update_by;
 
-    @Column(name = "created_by")
-    private Long createdBy;
-
-    @Column(name = "updated_at")
-    private Timestamp updatedAt;
-
-    @Column(name = "updated_by")
-    private Long updatedBy;
 
 }
+

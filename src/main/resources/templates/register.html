@@ -27,32 +27,32 @@
         <div th:object="${user}">
 
           <label for="fname" class="form-label">First Name</label>
-          <input id="fname" type="text" class="form-control" placeholder="Enter your name" th:field="*{firstName}" ><br>
+          <input id="fname" type="text" class="form-control" placeholder="Enter your name" th:field="*{first_name}" ><br>
 
           <label for="mname" class="form-label">Middle Name</label>
-          <input id="mname" type="text" class="form-control" placeholder="your middle name " th:field="*{middleName}"><br>
+          <input id="mname" type="text" class="form-control" placeholder="your middle name " th:field="*{middle_name}"><br>
 
           <label for="lname" class="form-label">Last Name</label>
-          <input id="lname" type="text" class="form-control" placeholder="your last name  " th:field="*{lastName}" ><br>
+          <input id="lname" type="text" class="form-control" placeholder="your last name  " th:field="*{last_name}" ><br>
 
           <label for="email" class="form-label">Email Id</label>
           <input id="email" type="text" class="form-control"  placeholder="abc@gmail.com " th:field="*{email}" ><br>
 
           <label for="mobile" class="form-label">Mobile Number</label>
-          <input id="mobile" type="tel" class="form-control" placeholder="xxxx-xxxx-xx" th:field="*{mobileNumber}"><br>
+          <input id="mobile" type="tel" class="form-control" placeholder="xxxx-xxxx-xx" th:field="*{mobile_number}"><br>
 
           <label for="password" class="form-label">Password</label>
           <input id="password" type="password" class="form-control"  placeholder="Acc@123" th:field="*{password}"><br>
         </div>
         <div th:object="${address}">
           <label for="address_line1" class="form-label">Address line1</label>
-          <input id="address_line1" type="text" class="form-control"  placeholder="Address line1 " th:field="*{line1}"><br>
+          <input id="address_line1" type="text" class="form-control"  placeholder="Address line1 " th:field="*{address_line_1}"><br>
 
           <label for="address_line2" class="form-label">Address line2</label>
-          <input id="address_line2" type="text" class="form-control"  placeholder="Address line2" th:field="*{line2}"><br>
+          <input id="address_line2" type="text" class="form-control"  placeholder="Address line2" th:field="*{address_line_2}"><br>
 
           <label for="address_line3" class="form-label">Address line3</label>
-          <input id="address_line3" type="text" class="form-control"  placeholder="Address line3" th:field="*{line3}"><br>
+          <input id="address_line3" type="text" class="form-control"  placeholder="Address line3" th:field="*{address_line_3}"><br>
 
           <label for="city" class="form-label">City</label>
           <input id="city" type="text" class="form-control"  placeholder="city" th:field="*{city}"><br>
@@ -67,7 +67,7 @@
           <input id="type" type="text" class="form-control"  placeholder="p/c" th:field="*{type}"><br>
 
           <label for="pin" class="form-label">Pincode</label>
-          <input id="pin" type="text" class="form-control"  placeholder="p/c" th:field="*{pincode}"><br>
+          <input id="pin" type="text" class="form-control"  placeholder="******" th:field="*{pincode}"><br>
 
         </div>
 

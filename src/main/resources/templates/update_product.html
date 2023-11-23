@@ -67,8 +67,9 @@
   <h1>Manage Products</h1>
   <h2>Update Products</h2>
 
-  <form action="#" th:action="@{/saveProduct}" th:object="${product}" method="post">
-    <input type="text" th:field="${product.name}" placeholder="Enter Product Name" class="form-control mb-4 col-4">
+  <form action="#" th:action="@{/updateProductName}" th:object="${product}" method="post">
+    <input type="hidden"th:field="${product.product_id}"  >
+    <input type="text" th:field="${product.name}" placeholder="Enter Product Name" class="form-control mb-4 col-4" >
     <input type="text" th:field="${product.category}" placeholder="Enter Product Category FMCG/HomeAppliance"
            class="form-control mb-4 col-4">
     <input type="text" th:field="${product.price}" placeholder="Enter Product Price" class="form-control mb-4 col-4">
