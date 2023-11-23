@@ -17,9 +17,8 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "address_id") // Specify the column name in the database
     private int address_id;
-     @OneToOne(cascade = CascadeType.ALL)
+     @OneToOne(cascade = CascadeType.ALL ,mappedBy = "address")
      // Define the foreign key column
-     @JoinColumn(name = "user_id",referencedColumnName = "user_id")
      private UserEntity userEntity;
 
     public Address(UserEntity userEntity) {
