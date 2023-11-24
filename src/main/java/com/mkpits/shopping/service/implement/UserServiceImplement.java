@@ -10,9 +10,24 @@ import org.springframework.stereotype.Service;
 public class UserServiceImplement implements UserService {
     @Autowired
     public UserRepository userRepository;
+
     @Override
     public UserEntity createUser(UserEntity userEntity) {
 
         return userRepository.save(userEntity);
     }
+
+    @Override
+    public boolean findUserByUsername(String email) {
+
+        System.out.println(email + "1");
+
+        UserEntity userEntity = userRepository.findUserEntityByEmail(email);
+        System.out.println(userEntity);
+        if ((email.equals(userEntity.getEmail()))) {
+            return true;
+        }
+        return false;
+    }
+
 }
