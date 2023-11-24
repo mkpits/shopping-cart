@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 50px;
+            font-size: 36px;
+        }
+
+        h2 {
+            color: #555;
+            font-size: 24px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        span {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .pay-info {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animated {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container animated">
+    <h1>Buy Page</h1>
+
+    <h2>Congratulations, your product is on the way!</h2>
+
+    <h2>Your Product Details:</h2>
+
+    <p>The product is: <span th:text="${product.name}"></span></p>
+    <p>The price is: <span th:text="${product.price}"></span></p>
+    <p>The category is: <span th:text="${product.category}"></span></p>
+
+    <p>The total quantity : <span th:text="${product.quantity}"></span></p>
+
+    <!--    passing values-->
+
+    <!-- In cart.html -->
+    <p id="total">Total Amount1: </p>
+<!--    <span th:text="${product.total_amount}"></span>-->
+
+    <!--    passing values-->
+
+    <h2 class="pay-info">Kindly pay on this number: 9975366927</h2>
+    <h2>#Kindly note Udhari Band</h2>
+</div>
+<script>
+    // var totalAmount = sessionStorage.getItem('totalAmount');
+    // document.getElementById('totalAmount').innerText = 'Total Amount: $' + totalAmount;
+
+    var total = sessionStorage.getItem("total");
+    document.getElementById('total').innerText = 'Total Amount: $' + total;
+    console.log(total);
+    // alert(total);
+
+</script>
+
+</body>
+</html>

@@ -41,6 +41,7 @@ public class Product {
     @Column(name = "discount_id")
     private Integer discount_id;
 
-
+    @Column(name = "total_amount")
+    private Long total_amount;
 
 }

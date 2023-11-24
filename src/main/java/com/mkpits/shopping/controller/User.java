@@ -45,8 +45,10 @@ public class User {
         userService.createUser(userEntity);
         addressService.saveAddress(address);
         return "/index";
+
     }
 
+<<<<<<< HEAD
     @PostMapping("/check-login")
     public String userLogin(@RequestParam("email") String email) {
 
@@ -59,3 +61,9 @@ public class User {
 
     }
 }
+=======
+
+}
+
+
+>>>>>>> cc51da8f928e80d1c435fd72f158012ecd980918
