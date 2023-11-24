@@ -3,62 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: aquamarine;
+    <title>Shopping Cart Dashboard</title>
+    <link rel="stylesheet" href="../static/dashboar.css"/>
 
-        }
+<!--    <style>-->
+<!--        body {-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            background-color: #f4f4f4;-->
+<!--            display: flex;-->
+<!--            flex-direction: column;-->
+<!--            justify-content: flex-end;-->
+<!--            align-items: center;-->
+<!--            height: 100vh;-->
+<!--            font-family: 'Arial', sans-serif;-->
+<!--            background-image: url("static/dashboard_iamge.png");-->
+<!--        }-->
 
-        .dashboard {
-            background-color: #3498db;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            width: 300px;
-            text-align: center;
-            padding: 20px;
-            transition: background-color 0.3s;
-        }
+<!--        .dashboard {-->
+<!--            /* background-color: #3498db; */-->
+<!--            border-radius: 10px;-->
+<!--            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);-->
+<!--            width: 300px;-->
+<!--            text-align: center;-->
+<!--            padding: 40px;-->
+<!--            /*transition: background-color 0.3s, box-shadow 0.3s;*/-->
+<!--            color: #fff;-->
+<!--            margin-bottom: 20px;-->
+<!--            margin-right:-40px ;-->
 
-        .dashboard:hover {
-            background-color: #2980b9;
-        }
+<!--        }-->
 
-        .btn {
-            display: inline-block;
-            background-color: #e74c3c;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 10px;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.2s;
-        }
+<!--        .dashboard:hover {-->
+<!--            background-color: #2980b9;-->
+<!--            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);-->
+<!--        }-->
 
-        .btn:hover {
-            background-color: #c0392b;
-            transform: scale(1.05);
-        }
-    </style>
+<!--        h1 {-->
+<!--            font-size: 24px;-->
+<!--            margin-bottom: 10px;-->
+<!--            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);-->
+
+
+<!--        }-->
+
+<!--        .btn-container {-->
+<!--            display: flex;-->
+<!--            justify-content: space-between; /* Align items to the start and end */-->
+<!--            width: 100%; /* Ensure the buttons take up the full width */-->
+
+
+<!--        }-->
+
+<!--        .btn {-->
+<!--            background-color: #e74c3c;-->
+<!--            color: #fff;-->
+<!--            padding: 15px 25px;-->
+<!--            border-radius: 5px;-->
+<!--            text-decoration: none;-->
+<!--            transition: background-color 0.3s, transform 0.2s;-->
+<!--            font-size: 18px;-->
+<!--            border: none;-->
+<!--            cursor: pointer;-->
+<!--            margin-left: 20px;-->
+<!--            margin-right: 20px;-->
+<!--            margin-top: 350px;-->
+<!--            padding-top: 10px;-->
+<!--            margin-bottom:20px ;-->
+<!--        }-->
+
+<!--        .btn:hover {-->
+<!--            background-color: #c0392b;-->
+<!--            /* transform: scale(1.1);-->
+<!--            transition: background-color 0.3s, transform 0.2s; */-->
+<!--            /* margin-bottom: 70px; */-->
+<!--        }-->
+<!--    </style>-->
+
 </head>
 <body>
 <div class="dashboard">
-    <h1>Welcome to the Dashboard</h1>
-    <!-- ... your dashboard content ... -->
-<!--    <a th:href="@{/redirectToUserLoginPage}" class="btn">User</a> old one &lt;!&ndash;    return "login";&ndash;&gt;-->
-    <a th:href="@{/userPage}" class="btn">User</a> <!--    return "login";-->
-  <a th:href="@{/redirectToAdminPage}" class="btn">Admin</a> <!--    @RequestMapping("/mainPage")  return "product";-->
-<!--    <a th:href="@{/showNewProductForm}" class="dropdown-item">Add Product</a>-->
-
-
+    <h1>Welcome to the Shopping Cart Dashboard</h1>
+</div>
+<div class="btn-container">
+    <a th:href="@{/userPage}" class="btn">User Dashboard</a>
+    <a th:href="@{/redirectToAdminPage}" class="btn">Admin Dashboard</a>
 </div>
 </body>
 </html>
-
