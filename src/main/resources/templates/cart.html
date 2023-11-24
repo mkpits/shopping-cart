@@ -103,7 +103,10 @@
         <!--        inserting values-->
 
         <!--        passing values-->
-        <input type="hidden" th:name="totalAmount" th:value="${totalAmount}"/>
+<!--        <input type="hidden" th:name="totalAmount" th:value="${totalAmount}"/>-->
+        <!-- Add this hidden input in cart.html -->
+<!--        <input type="hidden" id="totalAmountInput" name="totalAmount" th:value="${totalAmount}" />-->
+
         <!--        passing values-->
 
 <!--        <input type="hidden" name="totalAmount" th:value="${totalAmount}" />-->
@@ -140,13 +143,18 @@
             document.getElementById('totalAmount').innerText = 'Total Amount: $' + total.toFixed(2);
 
             // Set the total amount in the hidden input
-            document.getElementById('totalAmountInput').value = total.toFixed(2);
+            // document.getElementById('totalAmountInput').value = total.toFixed(2);
+
+
 
             // // Store the total amount in sessionStorage
             // .setItem('totalAmount', total.toFixed(2));
         } else {
             document.getElementById('totalAmount').innerText = 'Total Amount: Invalid Price';
         }
+
+        sessionStorage.setItem("total", total);
+        console.log(sessionStorage.getItem("total"));
     }
 
     // passing values
