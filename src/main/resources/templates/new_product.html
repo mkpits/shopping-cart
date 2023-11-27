@@ -67,18 +67,63 @@
             background-color: #0056b3;
         }
     </style>
+
+    <script>
+        function validateFormForName() {
+            var name = document.myForm.fname.value;
+            var category = document.myForm.fcategory.value;
+            var price = document.myForm.price.value;
+
+            // Validation for Product Name length
+            if (name.length > 30) {
+                alert('Please enter a name with max 30 character');
+                return false;
+            }
+            // Validation for Category Name length
+            if(category.length > 30){
+                alert('Please enter a category with max 30 character');
+                return false;
+            }
+
+            // Validation for Product Name
+            if (!name.match(/^[a-zA-Z]+(\s{1}[a-zA-Z]+)*$/)) {
+
+                alert('Please enter a proper name');
+                return false;
+            }
+
+            // Validation for Product Category
+            if (!category.match(/^[a-zA-Z]+(\s{1}[a-zA-Z]+)*$/)) {
+                alert('Please enter a proper category');
+                return false;
+            }
+
+            // Validation for Product Price (numeric only)
+            if (!price.match(/^\d+(\.\d+)?$/)) {
+                alert('Please enter a valid numeric price');
+                return false;
+            }
+
+            // Additional validations can be added for other fields if needed
+
+            // If all validations pass, return true
+            return true;
+        }
+    </script>
+
 </head>
 <body>
 <div class="container">
     <h1>Manage Products</h1>
     <h2>Add Products</h2>
 
-    <form action="#" th:action="@{/saveProduct}" th:object="${product}" method="post">
+    <form action="#" name="myForm" onsubmit="return validateFormForName()" th:action="@{/saveProduct}" th:object="${product}" method="post">
+
         <!--        <input type="text" th:field="${product.product_id}" placeholder="Enter Product Id" class="form-control mb-4 col-4" >-->
-        <input type="text" th:field="${product.name}" placeholder="Enter Product Name" class="form-control mb-4 col-4">
-        <input type="text" th:field="${product.category}" placeholder="Enter Product Category FMCG/HomeAppliance"
+        <input type="text" th:field="${product.name}" placeholder="Enter Product Name" name="fname" class="form-control mb-4 col-4">
+        <input type="text" th:field="${product.category}" placeholder="Enter Product Category FMCG/HomeAppliance" name="fcategory"
                class="form-control mb-4 col-4">
-        <input type="text" th:field="${product.price}" placeholder="Enter Product Price"
+        <input type="text" th:field="${product.price}" placeholder="Enter Product Price" name="price"
                class="form-control mb-4 col-4">
         <!--        <label>ProductCreatedAt</label>-->
         <input type="datetime-local" th:field="${product.created_at}" placeholder="Select Product CreatedAt"
