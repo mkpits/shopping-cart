@@ -115,6 +115,32 @@
             background-color: #c0392b;
             transform: scale(1.05);
         }
+        h1 search-container {
+            float: right;
+        }
+
+        h1 input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+
+        h1 search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+        h1 search-container button:hover {
+            background: #ccc;
+        }
+
     </style>
 </head>
 <body>
@@ -136,6 +162,8 @@
 </div>
 <div align="center">
     <h1>Admin Page - Product List</h1>
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
     <table class="table" border="1">
         <thead class="thead-dark">
         <tr>
@@ -161,6 +189,8 @@
 <div class="product">
     <!-- ... your product content ... -->
     <a th:href="@{/mainPage}" class="btn">Go back to Dashboard</a>
+
+
 </div>
 </body>
 </html>
