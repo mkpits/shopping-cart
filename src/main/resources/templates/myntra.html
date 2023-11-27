@@ -4,17 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Fashion Store</title>
-
-  <link rel="stylesheet"  media="screen" th:href="@{../css/myntra-style.css}">
-<!--  <link rel="stylesheet" media="screen" th:href="@{/css/application.css}"/>-->
-<!--  <link rel="stylesheet" th:href="@{../css/style.css}">-->
-
+  <title>My Fashion Store</title>
+  <link rel="stylesheet" href="myntra-style.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <header>
@@ -30,16 +27,40 @@
         <li><a href="#">Home & Living</a></li>
       </ul>
     </nav>
-    <div class="search-bar">
-      <input type="text" placeholder="Search">
-      <button type="submit">Search</button>
+    <div class="search-bar" >
+      <div class="searchbuttonbox">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search for products,brand and more">
+      </div>
+
+      <!-- <button type="submit">Search</button> -->
     </div>
+    <!-- logos option -->
+
     <div class="user-options">
-      <a href="#">Login</a>
-      <a href="#">Signup</a>
-      <a href="#">Wishlist</a>
-      <a href="#">Bag</a>
+      <div class="logoalignment">
+        <i class="fa-solid fa-user"></i>
+        <a href="#">Login</a>
+      </div>
+
+      <div class="logoalignment">
+        <i class="fa-solid fa-user-plus"></i>
+        <a href="#">Signup</a>
+      </div>
+
+      <div class="logoalignment">
+        <i class="fa-solid fa-heart"></i>
+        <a href="#">Wishlist</a>
+      </div>
+
+      <div class="logoalignment">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <a href="#">Cart</a>
+      </div>
     </div>
+
+
+    <!-- logos option -->
   </div>
 </header>
 
@@ -49,20 +70,16 @@
 
 </div>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="30000">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
   <div class="carousel-inner">
     <div class="carousel-item active">
-<!--      <img src="carsoul2.jpg" alt="Slide 1">-->
-      <img th:src="@{/images/carsoul2.jpg}" alt="Slide 1"/>
+      <img src="carsoul2.jpg" alt="Slide 1">
     </div>
     <div class="carousel-item">
-<!--      <img src="carsoul3.jpg" alt="Slide 2">-->
-      <img th:src="@{/images/carsoul3.jpg}" alt="Slide 1"/>
+      <img src="carsoul3.jpg" alt="Slide 2">
     </div>
     <div class="carousel-item">
-<!--      <img src="images/carsoul4.jpg" alt="Slide 3">-->
-      <img th:src="@{/images/carsoul4.jpg}" alt="Slide 1"/>
-
+      <img src="carsoul4.jpg" alt="Slide 3">
     </div>
   </div>
   <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -87,6 +104,48 @@
     <h2>Your Shopping Cart</h2>
     <!-- Add your shopping cart content here -->
     <p>This is where you can display the items in the shopping cart.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt aliquam unde, maiores ipsam minima dolorum ex magnam
+      perspiciatis ipsum rem accusamus, nostrum vel labore, in maxime. Deleniti, ad ea.</p>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt aliquam unde, maiores ipsam minima dolorum ex magnam
+      perspiciatis ipsum rem accusamus, nostrum vel labore, in maxime. Deleniti, ad ea.</p>
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt aliquam unde, maiores ipsam minima dolorum ex magnam
+      perspiciatis ipsum rem accusamus, nostrum vel labore, in maxime. Deleniti, ad ea.</p>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt aliquam unde, maiores ipsam minima dolorum ex magnam
+      perspiciatis ipsum rem accusamus, nostrum vel labore, in maxime. Deleniti, ad ea.</p>
+
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt aliquam unde, maiores ipsam minima dolorum ex magnam
+      perspiciatis ipsum rem accusamus, nostrum vel labore, in maxime. Deleniti, ad ea.</p>
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt aliquam unde, maiores ipsam minima dolorum ex magnam
+      perspiciatis ipsum rem accusamus, nostrum vel labore, in maxime. Deleniti, ad ea.</p>
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt aliquam unde, maiores ipsam minima dolorum ex magnam
+      perspiciatis ipsum rem accusamus, nostrum vel labore, in maxime. Deleniti, ad ea.</p>
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt aliquam unde, maiores ipsam minima dolorum ex magnam
+      perspiciatis ipsum rem accusamus, nostrum vel labore, in maxime. Deleniti, ad ea.</p>
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt aliquam unde, maiores ipsam minima dolorum ex magnam
+      perspiciatis ipsum rem accusamus, nostrum vel labore, in maxime. Deleniti, ad ea.</p>
   </section>
 </main>
 
