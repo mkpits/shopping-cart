@@ -1,0 +1,101 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: rgb(217, 214, 214);
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    width: 180px;
+    height: 340px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 11px;
+    padding: 30px;
+    margin: 44px;
+    margin-inline: 11px;  /*rap karna*/
+}
+.card img{
+    width: 60%;
+}
+.card .Headphone{
+    width: 89%;
+}
+.card p{
+    margin: 9px;
+}
+.card h2{
+    margin: 9px;
+}
+.card i{
+    margin: 10px; /* changes */  
+    
+    color: rgb(252, 191, 24);
+}
+.card button{
+    /* margin-top: 47px; */
+    height: 40px;
+    width: 242px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: aqua;
+    /* margin-bottom: 400px;
+    margin-left: -250px; */
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    
+}
+.card .green{
+    background-color: rgb(55, 214, 90,0,844);
+    margin-bottom: 400px;
+    margin-top: 73px;
+    margin-left: -31.5px;
+}
+.card .blue{
+    background-color: rgb(17,17,46);
+    margin-top: 73px;
+    margin-left: -31.5px;
+   
+}
+.card .black{
+    background-color: rgb(50,214,60,0.904);
+    margin-top: 73px;
+    margin-left: -31.5px;
+}
+.card .red{
+    background-color: rgb(90, 200, 60);
+    margin-top: 43px;
+    margin-left: -31.5px;
+}
+.card .pink{
+    background-color: rgb(200,180,100);
+    margin-top: 25px;
+    margin-left: -31.5px;
+    margin-bottom: -180px;
+}
+.card .ornage{
+    background-color:black;
+    margin-top: 25px;
+    margin-left: -31.5px;
+    margin-bottom: -180px;
+}
+.star{
+    display: flex ;
+   
+    /* justify-content: space-between; */
+    /* justify-content: start; */
+    justify-content: stretch;
+    /* margin-top: 40px; */
+    
+    
+    
+}
+

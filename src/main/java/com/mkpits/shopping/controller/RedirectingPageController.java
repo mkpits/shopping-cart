@@ -34,4 +34,10 @@ public class RedirectingPageController {
         // opening mainPage
     }
 
+    @GetMapping("/myntra")
+    public String myntraPage(){
+        return "myntra";
+    }
+
+
 }
