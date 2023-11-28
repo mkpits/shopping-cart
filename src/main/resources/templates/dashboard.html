@@ -4,101 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart Dashboard</title>
-    <link rel="stylesheet" href="../static/dashboar.css"/>
-
-<!--    <style>-->
-<!--        body {-->
-<!--            margin: 0;-->
-<!--            padding: 0;-->
-<!--            background-color: #f4f4f4;-->
-<!--            display: flex;-->
-<!--            flex-direction: column;-->
-<!--            justify-content: flex-end;-->
-<!--            align-items: center;-->
-<!--            height: 100vh;-->
-<!--            font-family: 'Arial', sans-serif;-->
-<!--            background-image: url("static/dashboard_iamge.png");-->
-<!--        }-->
-
-<!--        .dashboard {-->
-<!--            /* background-color: #3498db; */-->
-<!--            border-radius: 10px;-->
-<!--            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);-->
-<!--            width: 300px;-->
-<!--            text-align: center;-->
-<!--            padding: 40px;-->
-<!--            /*transition: background-color 0.3s, box-shadow 0.3s;*/-->
-<!--            color: #fff;-->
-<!--            margin-bottom: 20px;-->
-<!--            margin-right:-40px ;-->
-
-<!--        }-->
-
-<!--        .dashboard:hover {-->
-<!--            background-color: #2980b9;-->
-<!--            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);-->
-<!--        }-->
-
-<!--        h1 {-->
-<!--            font-size: 24px;-->
-<!--            margin-bottom: 10px;-->
-<!--            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);-->
-
-
-<!--        }-->
-
-<!--        .btn-container {-->
-<!--            display: flex;-->
-<!--            justify-content: space-between; /* Align items to the start and end */-->
-<!--            width: 100%; /* Ensure the buttons take up the full width */-->
-
-
-<!--        }-->
-
-<!--        .btn {-->
-<!--            background-color: #e74c3c;-->
-<!--            color: #fff;-->
-<!--            padding: 15px 25px;-->
-<!--            border-radius: 5px;-->
-<!--            text-decoration: none;-->
-<!--            transition: background-color 0.3s, transform 0.2s;-->
-<!--            font-size: 18px;-->
-<!--            border: none;-->
-<!--            cursor: pointer;-->
-<!--            margin-left: 20px;-->
-<!--            margin-right: 20px;-->
-<!--            margin-top: 350px;-->
-<!--            padding-top: 10px;-->
-<!--            margin-bottom:20px ;-->
-<!--        }-->
-
-<!--        .btn:hover {-->
-<!--            background-color: #c0392b;-->
-<!--            /* transform: scale(1.1);-->
-<!--            transition: background-color 0.3s, transform 0.2s; */-->
-<!--            /* margin-bottom: 70px; */-->
-<!--        }-->
-<!--    </style>-->
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-image: url("static/images/dashboard.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .container-fluid{
+            margin-left: 500px;
+        }
+    </style>
 </head>
-<body>
-<div class="dashboard">
-<<<<<<< HEAD
-    <h1>Welcome to the Dashboard</h1>
-    <!-- ... your dashboard content ... -->
-    <a th:href="@{/registerUser}" class="btn">User</a> <!--    return "login";-->
+<body >
+<nav class="navbar" style="background-color:#9253D0; ">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">produst</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            user
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Orders </a></li>
+                        </ul>
+                    </li>
 
-  <a th:href="@{/redirectToAdminPage}" class="btn">Admin</a> <!--    @RequestMapping("/mainPage")  return "product";-->
+                </ul>
+                <div class="container-fluid" align="right">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</nav>
+
+
+<!--<div class="dashboard>-->
+<!--    <h1>Welcome to the Dashboard</h1>-->
+<!--    &lt;!&ndash; ... your dashboard content ... &ndash;&gt;-->
+<!--    <a th:href="@{/registerUser}" class="btn">User</a> &lt;!&ndash;    return "login";&ndash;&gt;-->
+
+<!--  <a th:href="@{/redirectToAdminPage}" class="btn">Admin</a> -->
+<!--    @RequestMapping("/mainPage")  return "product";-->
 <!--    <a th:href="@{/showNewProductForm}" class="dropdown-item">Add Product</a>-->
 
 
-=======
+
     <h1>Welcome to the Shopping Cart Dashboard</h1>
 </div>
-<div class="btn-container">
-    <a th:href="@{/userPage}" class="btn">User Dashboard</a>
-    <a th:href="@{/redirectToAdminPage}" class="btn">Admin Dashboard</a>
->>>>>>> cc51da8f928e80d1c435fd72f158012ecd980918
-</div>
+<!--<div class="btn-container">-->
+<!--    <a th:href="@{/userPage}" class="btn">User Dashboard</a>-->
+<!--    <a th:href="@{/redirectToAdminPage}" class="btn">Admin Dashboard</a>-->
+<!--</div>-->
 </body>
 </html>

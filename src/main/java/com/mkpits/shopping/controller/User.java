@@ -2,13 +2,15 @@ package com.mkpits.shopping.controller;
 
 import com.mkpits.shopping.model.Address;
 import com.mkpits.shopping.model.UserEntity;
-import com.mkpits.shopping.repository.UserRepository;
+
 import com.mkpits.shopping.service.AddressService;
 import com.mkpits.shopping.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class User {
@@ -48,22 +50,22 @@ public class User {
 
     }
 
-<<<<<<< HEAD
+
     @PostMapping("/check-login")
     public String userLogin(@RequestParam("email") String email) {
 
 
-        if (userService.findUserByUsername(email)){
+        if (userService.findUserByUsername(email)) {
             return "dashboard";
-        }
-        else
+        } else
             return "index";
+    }
 
+    @PostMapping("/logout")
+    public String logout(HttpServletRequest request) {
+
+        request.getSession().invalidate();
+        System.out.println("Logout Successfully");
+        return "redirect:/login";
     }
 }
-=======
-
-}
-
-
->>>>>>> cc51da8f928e80d1c435fd72f158012ecd980918
