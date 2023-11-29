@@ -2,13 +2,15 @@ package com.mkpits.shopping.controller;
 
 import com.mkpits.shopping.model.Address;
 import com.mkpits.shopping.model.UserEntity;
-import com.mkpits.shopping.repository.UserRepository;
+
 import com.mkpits.shopping.service.AddressService;
 import com.mkpits.shopping.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class User {
@@ -19,11 +21,6 @@ public class User {
     @Autowired
     private AddressService addressService;
 
-    @GetMapping("/")
-    public String index() {
-        return "index";
-
-    }
 
     @GetMapping("/login")
     public String login() {
@@ -44,7 +41,7 @@ public class User {
     public String addUser(@ModelAttribute("user") UserEntity userEntity, @ModelAttribute("address") Address address) {
         userService.createUser(userEntity);
         addressService.saveAddress(address);
-        return "/index";
+        return "/login";
 
     }
 
@@ -53,12 +50,20 @@ public class User {
     public String userLogin(@RequestParam("email") String email) {
 
 
-        if (userService.findUserByUsername(email)){
+        if (userService.findUserByUsername(email)) {
             return "dashboard";
-        }
-        else
-            return "index";
+        } else
+            return "login";
+    }
 
+
+    @PostMapping("/logout")
+    public String logout(HttpServletRequest request) {
+
+        request.getSession().invalidate();
+        System.out.println("Logout Successfully");
+        return "redirect:/login";
     }
 }
+
 
