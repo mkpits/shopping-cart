@@ -73,10 +73,7 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
+
 
 		<!--			Error creating bean with name -->
 		<!--			'entityManagerFactory' defined in class path resource -->
