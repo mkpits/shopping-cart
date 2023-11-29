@@ -66,7 +66,14 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.6.15.Final</version>
 		</dependency>
+<<<<<<< HEAD
 
+=======
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+>>>>>>> 4203145707e44915c12b1b1ca62d09be5b1185db
 
 
 		<!--			Error creating bean with name -->

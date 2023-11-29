@@ -38,4 +38,9 @@ public class CartController {
         return "buypage";
     }
 
+    @GetMapping("/getcard")
+    public String getcard(){
+        return "card.html";
+    }
+
 }

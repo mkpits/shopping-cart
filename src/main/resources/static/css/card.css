@@ -54,7 +54,7 @@ body{
     
 }
 .card .green{
-    background-color: rgb(55, 214, 90,0,844);
+    background-color: rgb(55, 214, 90,0.844);
     margin-bottom: 400px;
     margin-top: 73px;
     margin-left: -31.5px;
