@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
-
-
+import java.util.List;
 
 
 @Entity
@@ -16,22 +15,14 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 
+
 @Table(name = "user")
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id") // Specify the column name in the database
-    private int user_id;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name= "address_id",referencedColumnName = "address_id")
-    private Address address;
-
-    private String first_name;
-
-    private String middle_name;
-
-    private String last_name;
+    private Long user_id;
+    private String full_name;
 
     private String mobile_number;
 
@@ -49,48 +40,36 @@ public class UserEntity {
 
     private int update_by;
 
-    public int getUser_id() {
-        return user_id;
-    }
+    @OneToMany(mappedBy = "userEntity")
+    private List<Address> address;
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
-
-    public Address getAddress() {
+    public List<Address> getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(List<Address> address) {
         this.address = address;
     }
 
-    public String getFirst_name() {
-        return first_name;
+
+    public Long getUser_id() {
+        return user_id;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
-    }
-
-    public String getMiddle_name() {
-        return middle_name;
-    }
-
-    public void setMiddle_name(String middle_name) {
-        this.middle_name = middle_name;
-    }
-
-    public String getLast_name() {
-        return last_name;
-    }
-
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setUser_id(Long user_id) {
+        this.user_id = user_id;
     }
 
     public String getMobile_number() {
         return mobile_number;
+    }
+
+    public String getFull_name() {
+        return full_name;
+    }
+
+    public void setFull_name(String full_name) {
+        this.full_name = full_name;
     }
 
     public void setMobile_number(String mobile_number) {
@@ -144,5 +123,7 @@ public class UserEntity {
     public void setUpdate_by(int update_by) {
         this.update_by = update_by;
     }
+
+
 }
 

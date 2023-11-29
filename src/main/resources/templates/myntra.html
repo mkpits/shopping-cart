@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"   xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Fashion Store</title>
-  <link rel="stylesheet" href="myntra-style.css">
+  <link rel="stylesheet" th:href="@{../css/myntraStyle.css}">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -40,12 +40,12 @@
     <div class="user-options">
       <div class="logoalignment">
         <i class="fa-solid fa-user"></i>
-        <a href="#">Login</a>
+        <a href="/login">Login</a>
       </div>
 
       <div class="logoalignment">
         <i class="fa-solid fa-user-plus"></i>
-        <a href="#">Signup</a>
+        <a href="/registerUser">MyProfile</a>
       </div>
 
       <div class="logoalignment">
@@ -73,13 +73,13 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="carsoul2.jpg" alt="Slide 1">
+      <img th:src="@{../images/carsoul2.jpg}" alt="Slide 1" />
     </div>
     <div class="carousel-item">
-      <img src="carsoul3.jpg" alt="Slide 2">
+      <img th:src="@{../images/carsoul3.jpg}" alt="Slide 2">
     </div>
     <div class="carousel-item">
-      <img src="carsoul4.jpg" alt="Slide 3">
+      <img th:src="@{../images/carsoul4.jpg}" alt="Slide 3">
     </div>
   </div>
   <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">

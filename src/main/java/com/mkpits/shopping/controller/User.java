@@ -21,11 +21,6 @@ public class User {
     @Autowired
     private AddressService addressService;
 
-    @GetMapping("/")
-    public String index() {
-        return "index";
-
-    }
 
     @GetMapping("/login")
     public String login() {
@@ -46,7 +41,7 @@ public class User {
     public String addUser(@ModelAttribute("user") UserEntity userEntity, @ModelAttribute("address") Address address) {
         userService.createUser(userEntity);
         addressService.saveAddress(address);
-        return "/index";
+        return "/login";
 
     }
 
@@ -58,9 +53,9 @@ public class User {
         if (userService.findUserByUsername(email)) {
             return "dashboard";
         } else
-            return "index";
+            return "login";
     }
-<<<<<<< HEAD
+
 
     @PostMapping("/logout")
     public String logout(HttpServletRequest request) {
@@ -70,15 +65,12 @@ public class User {
         return "redirect:/login";
     }
 }
-=======
-}
-
-<<<<<<< HEAD
-
-//}
 
 
-//>>>>>>> cc51da8f928e80d1c435fd72f158012ecd980918
-=======
->>>>>>> f69d3b717e3899bf2f9bae3177a082b226a1e893
->>>>>>> f6db9db1cf869171e08e0273ee7c57c5dcc7a5c0
+
+
+
+
+
+
+
