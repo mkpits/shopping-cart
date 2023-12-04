@@ -36,7 +36,7 @@ public class RedirectingPageController {
 
     @GetMapping("/myntra")
     public String myntraPage(){
-        return "myntra";
+        return "myntra1";
     }
 
 
