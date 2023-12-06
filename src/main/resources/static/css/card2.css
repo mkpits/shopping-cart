@@ -1,0 +1,63 @@
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(217, 214, 214);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 180px;
+    height: 250px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 11px;
+    /*padding: 30px; to make image visible*/
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 400%; /* Updated to accommodate all images */
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 5s ease-in-out; /* Added transition property */
+}
+
+.carousel img {
+    flex: 0 0 25%; /* Updated to 25% to fit all images */
+    width: 100%;
+    height: auto; /* Maintain image aspect ratio */
+}
+
+.card:hover .carousel {
+    transform: translateX(-100%); /* Updated to show next set of images */
+}
+
+
+.card button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: aqua;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+}
