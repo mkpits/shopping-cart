@@ -43,4 +43,21 @@ public class CartController {
         return "card.html";
     }
 
+
+    @GetMapping("/myntracart1")
+    public String myntracart(){
+        return "myntracart.html";
+    }
+
+    @GetMapping("/getcarsousel")
+    public String carsousel(){
+        return "carsousel";
+    }
+
+    @GetMapping("/newcard")
+    public String cardimg(){
+        return "card2";
+
+    }
+
 }

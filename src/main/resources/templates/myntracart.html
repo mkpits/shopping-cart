@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{../css/card1.css}">
+    <script src="https://kit.fontawessome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--        <style>-->
+<!--            *{-->
+<!--                margin: 0%;-->
+<!--                padding: 0%;-->
+<!--            }-->
+<!--            body{-->
+<!--                background-color: rgb(217, 214, 214);-->
+
+<!--            }-->
+<!--            .container{-->
+<!--                display: flex;-->
+<!--                justify-content: center;-->
+<!--                justify-content: space-around;,-->
+<!--                flex-wrap: wrap;-->
+<!--            }-->
+<!--            .card{-->
+<!--                width: 180px;-->
+<!--                height: 250px;-->
+<!--                background-color: #fff;-->
+<!--                text-align: center;-->
+<!--                border-radius: 11px;-->
+<!--                padding: 30px;-->
+<!--                margin: 44px;-->
+<!--                margin-inline: 11px;  /*rap karna*/-->
+<!--            }-->
+<!--            .card img{-->
+<!--                width: 60%;-->
+<!--            }-->
+<!--            .card .Headphone{-->
+<!--                width: 89%;-->
+<!--            }-->
+<!--            .card p{-->
+<!--                margin: 9px;-->
+<!--            }-->
+<!--            .card h2{-->
+<!--                margin: 9px;-->
+<!--            }-->
+<!--            .card i{-->
+<!--                margin: 10px; /* changes */-->
+
+<!--                color: rgb(252, 191, 24);-->
+<!--            }-->
+<!--            .card button{-->
+<!--                /* margin-top: 47px; */-->
+<!--                height: 40px;-->
+<!--                width: 242px;-->
+<!--                border: none;-->
+<!--                font-size: 20px;-->
+<!--                color: white;-->
+<!--                background-color: aqua;-->
+<!--                /* margin-bottom: 400px;-->
+<!--                margin-left: -250px; */-->
+<!--                border-bottom-left-radius: 11px;-->
+<!--                border-bottom-right-radius: 11px;-->
+
+<!--            }-->
+<!--            .card .green{-->
+<!--                background-color: rgb(55, 214, 90,0.844);-->
+<!--                margin-bottom: 400px;-->
+<!--                margin-top: 73px;-->
+<!--                margin-left: -31.5px;-->
+<!--            }-->
+<!--            .card .blue{-->
+<!--                background-color: rgb(17,17,46);-->
+<!--                margin-top: 73px;-->
+<!--                margin-left: -31.5px;-->
+
+<!--            }-->
+<!--            .card .black{-->
+<!--                background-color: rgb(50,214,60,0.904);-->
+<!--                margin-top: 73px;-->
+<!--                margin-left: -31.5px;-->
+<!--            }-->
+<!--            .card .red{-->
+<!--                background-color: rgb(90, 200, 60);-->
+<!--                margin-top: 43px;-->
+<!--                margin-left: -31.5px;-->
+<!--            }-->
+<!--            .card .pink{-->
+<!--                background-color: rgb(200,180,100);-->
+<!--                margin-top: 25px;-->
+<!--                margin-left: -31.5px;-->
+<!--                margin-bottom: -180px;-->
+<!--            }-->
+<!--            .card .ornage{-->
+<!--                background-color:black;-->
+<!--                margin-top: 25px;-->
+<!--                margin-left: -31.5px;-->
+<!--                margin-bottom: -180px;-->
+<!--            }-->
+<!--            /*.star{*/-->
+<!--            /*    display: flex ;*/-->
+
+<!--            /*    !* justify-content: space-between; *!*/-->
+<!--            /*    !* justify-content: start; *!*/-->
+<!--            /*    justify-content: stretch;*/-->
+<!--            /*    !* margin-top: 40px; *!*/-->
+
+
+
+<!--            /*}*/-->
+<!--        </style>-->
+
+</head>
+<body>
+<div class="container">
+    <div class="cart">
+    <div class="wrapper">
+        <img  th:src="@{../images/shoes.png}">
+        <img  th:src="@{../images/shoes1.png}">
+        <img  th:src="@{../images/shoes2.png}">
+    </div>
+    </div>
+<!--        <h2>HRX Shoe</h2>-->
+<!--        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>-->
+<!--        <div class="star">-->
+<!--            <i class="fa-solid fa-star"></i>-->
+<!--            <i class="fa-solid fa-star"></i>-->
+<!--            <i class="fa-solid fa-star"></i>-->
+<!--            <i class="fa-solid fa-star"></i>-->
+<!--            <i class="fa-solid fa-star-half-stroke"></i>-->
+<!--        </div>-->
+
+<!--        <button class="green">Buy Now</button>-->
+<!--    </div>-->
+<!--    <div class="card">-->
+<!--        <img th:src="@{../images/iphone.png}">-->
+<!--        <h2>iphone</h2>-->
+<!--&lt;!&ndash;        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="star">&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--        <button class="blue">Buy Now</button>-->
+<!--    </div>-->
+    <div class="cart">
+    <div class="wrapper1">
+        <img th:src="@{../images/Headphone.png}">
+        <img th:src="@{../images/jacket.png}">
+        <img th:src="@{../images/belt.png}">
+
+        </div>
+    </div>
+<!--        <h2>watch</h2>-->
+<!--&lt;!&ndash;        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="star">&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--        <button class="black">Buy Now</button>-->
+<!--    </div>-->
+<!--    <div class="card">-->
+<!--        <img th:src="@{../images/ferrari.png}">-->
+<!--        <h2>Ferrari Car</h2>-->
+<!--&lt;!&ndash;        <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="star">&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--        <button class="red">Buy Now</button>-->
+<!--    </div>-->
+<!--    <div class="card">-->
+<!--        <img th:src="@{../images/jacket.png}">-->
+<!--        <h2>jacket</h2>-->
+<!--&lt;!&ndash;        <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="star">&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--        <button class="pink">Buy Now</button>-->
+<!--    </div>-->
+<!--    <div class="card">-->
+<!--        <img th:src="@{../images/schoolbag.png}">-->
+<!--        <h2>SchoolBag</h2>-->
+<!--&lt;!&ndash;        <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="star">&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--        <button class="pink">Buy Now</button>-->
+<!--    </div>-->
+<!--    <div class="card">-->
+<!--        <img th:src="@{../images/Applelaptop.png}">-->
+<!--        <h2>Laptop</h2>-->
+<!--&lt;!&ndash;        <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="star">&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--        <button class="pink">Buy Now</button>-->
+<!--    </div>-->
+<!--    <div class="card">-->
+<!--        <img  th:src="@{../images/belt.png}">-->
+<!--        <h2>Belt</h2>-->
+<!--&lt;!&ndash;        <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="star">&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--        <button class="pink">Buy Now</button>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    <div class="card">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img  th:src="@{../images/clothing.png}">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2>Clothing</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="star">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        </div>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <button class="pink">Buy Now</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="card">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img th:src="@{../images/karizma.png}">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2>Karizma Bike</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="star">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        </div>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <button class="pink">Buy Now</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="card">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img src="schoolbag.png" alt="">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2>SchoolBag</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="star">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        </div>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <button class="pink">Buy Now</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="card">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img src="schoolbag.png" alt="">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2>SchoolBag</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="star">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <i class="fa-solid fa-star-half-stroke"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        </div>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <button class="pink">Buy Now</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+</div>
+
+</body>
+</html>
+
