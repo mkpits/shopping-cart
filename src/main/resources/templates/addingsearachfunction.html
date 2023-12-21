@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en"   xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="linear-gradient(to bottom, #61daff, #656bff)">
-    <link rel="stylesheet" href="addingsearchfunction.css">
+
+    <link rel="stylesheet" th:href="@{../css/addingsearchfunction.css}">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
     <title>Simple Add to cart functionality using Javascript</title>
@@ -70,7 +74,8 @@
                                     <div class="featured-item">
                                         <div class="featured-item-img">
                                             <a href="#">
-                                                <img src="img/men-1.jpg" alt="Images">
+<!--                                                <img src="img/men-1.jpg" alt="Images">-->
+                                                <img th:src="@{../images/men-1.jpg}" alt="Images">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -91,7 +96,8 @@
                                     <div class="featured-item">
                                         <div class="featured-item-img">
                                             <a href="#">
-                                                <img src="img/women-1.jpg" alt="Images">
+<!--                                                <img src="img/women-1.jpg" alt="Images">-->
+                                                <img th:src="@{../images/women-1.jpg}" alt="Images">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -112,7 +118,8 @@
                                     <div class="featured-item">
                                         <div class="featured-item-img">
                                             <a href="#">
-                                                <img src="img/watch-1.jpg" alt="Images">
+<!--                                                <img src="img/watch-1.jpg" alt="Images">-->
+                                                <img th:src="@{../images/watch-1.jpg}" alt="Images">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -133,7 +140,8 @@
                                     <div class="featured-item">
                                         <div class="featured-item-img">
                                             <a href="#">
-                                                <img src="img/men-2.jpg" alt="Images">
+<!--                                                <img src="img/men-2.jpg" alt="Images">-->
+                                                <img th:src="@{../images/men-2.jpg}" alt="Images">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -175,7 +183,8 @@
                                     <div class="featured-item">
                                         <div class="featured-item-img">
                                             <a href="#">
-                                                <img src="img/watch-2.jpg" alt="Images">
+<!--                                                <img src="img/watch-2.jpg" alt="Images">-->
+                                                <img th:src="@{../images/watch-2.jpg}" alt="Images">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -196,7 +205,8 @@
                                     <div class="featured-item">
                                         <div class="featured-item-img">
                                             <a href="#">
-                                                <img src="img/men-3.jpg" alt="Images">
+<!--                                                <img src="img/men-3.jpg" alt="Images">-->
+                                                <img th:src="@{../images/men-3.jpg}" alt="Images">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -217,7 +227,8 @@
                                     <div class="featured-item">
                                         <div class="featured-item-img">
                                             <a href="#">
-                                                <img src="img/women-3.jpg" alt="Images">
+<!--                                                <img src="img/women-3.jpg" alt="Images">-->
+                                                <img th:src="@{../images/women-3.jpg}" alt="Images">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -238,7 +249,8 @@
                                     <div class="featured-item">
                                         <div class="featured-item-img">
                                             <a href="#">
-                                                <img src="img/watch-3.jpg" alt="Images">
+<!--                                                <img src="img/watch-3.jpg" alt="Images">-->
+                                                <img th:src="@{../images/watch-3.jpg}" alt="Images">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -697,7 +709,10 @@
 <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="addingsearchfunction.js"></script>
+<!--<script src="addingsearchfunction.js"></script>-->
+
+<script type="text/javascript" th:src="@{/js/addingsearchfunction.js}"></script>
+
 
 <!-- external scripting tags mentioned  -->
 

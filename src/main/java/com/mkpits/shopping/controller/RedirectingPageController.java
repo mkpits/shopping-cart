@@ -40,4 +40,10 @@ public class RedirectingPageController {
     }
 
 
+    @GetMapping("/addingsearchfunction")
+    public String myNextFrontPage(){
+
+        return "addingsearachfunction";
+    }
+
 }

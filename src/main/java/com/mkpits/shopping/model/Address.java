@@ -27,6 +27,7 @@ public class Address {
      private UserEntity userEntity;
 
      private String address_line_1;
+
     private String city;
 
     private String state;
